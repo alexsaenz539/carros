@@ -28,18 +28,8 @@ import { Subject, takeUntil } from 'rxjs';
     imports: [
         FuseLoadingBarComponent,
         FuseVerticalNavigationComponent,
-        FuseHorizontalNavigationComponent,
         MatButtonModule,
-        MatIconModule,
-        LanguagesComponent,
-        FuseFullscreenComponent,
-        SearchComponent,
-        ShortcutsComponent,
-        MessagesComponent,
-        NotificationsComponent,
-        UserComponent,
-        RouterOutlet,
-        QuickChatComponent,
+        MatIconModule
     ],
 })
 export class ModernLayoutComponent implements OnInit, OnDestroy {

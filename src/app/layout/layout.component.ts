@@ -14,7 +14,7 @@ import { FusePlatformService } from '@fuse/services/platform';
 import { FUSE_VERSION } from '@fuse/version';
 import { Subject, combineLatest, filter, map, takeUntil } from 'rxjs';
 import { SettingsComponent } from './common/settings/settings.component';
-import { EmptyLayoutComponent } from './layouts/empty/empty.component';
+import { EmptyLayoutComponent } from './layouts/empty/base.component';
 import { CenteredLayoutComponent } from './layouts/horizontal/centered/centered.component';
 import { EnterpriseLayoutComponent } from './layouts/horizontal/enterprise/enterprise.component';
 import { MaterialLayoutComponent } from './layouts/horizontal/material/material.component';
