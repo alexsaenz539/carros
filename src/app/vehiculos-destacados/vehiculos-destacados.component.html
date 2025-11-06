@@ -1,0 +1,53 @@
+<div class="slider-container">
+    <div class="now-showing">Vehiculos destacados</div>
+
+    <div class="accordion-slider">
+        <div *ngFor="let item of datos" class="slide" [ngStyle]="{ 'background-image': 'url(' + item.imageUrl + ')' }">
+            <div class="slide-content">
+                <div class="slide-number">{{item.id}}</div>
+                <div class="car-brand">{{item.brand}}</div>
+                <div class="car-name">{{item.model}}</div>
+                <div class="car-subtitle">{{item.type}}</div>
+
+                <div class="car-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">Motor:</span>
+                        <span class="spec-value">3.0L Twin-Turbo Inline-6</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Potencia:</span>
+                        <span class="spec-value">{{ item.hp }} HP</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Torque:</span>
+                        <span class="spec-value">{{ item.torqueNm }} Nm</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Transmisión:</span>
+                        <span class="spec-value">{{ item.transmission }}</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Año:</span>
+                        <span class="spec-value">{{ item.year }}</span>
+                    </div>
+                </div>
+
+                <div class="performance-badges">
+                    <div class="badge">
+                        <div class="badge-icon"></div>
+                        <span>0–100: {{ item.acceleration_0_100 }}</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon"></div>
+                        <span>Vel. máx: {{ item.topSpeed }}</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon"></div>
+                        <span>Desde: {{ item.priceMxn | currency:'MXN': 'symbol' }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="add-button"></div>
+        </div>
+    </div>
+</div>

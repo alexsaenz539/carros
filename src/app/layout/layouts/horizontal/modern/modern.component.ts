@@ -19,6 +19,8 @@ import { QuickChatComponent } from 'app/layout/common/quick-chat/quick-chat.comp
 import { SearchComponent } from 'app/layout/common/search/search.component';
 import { ShortcutsComponent } from 'app/layout/common/shortcuts/shortcuts.component';
 import { UserComponent } from 'app/layout/common/user/user.component';
+import { TiposVehiculosComponent } from 'app/tipos-vehiculos/tipos-vehiculos.component';
+import { VehiculosDestacadosComponent } from 'app/vehiculos-destacados/vehiculos-destacados.component';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
@@ -29,7 +31,9 @@ import { Subject, takeUntil } from 'rxjs';
         FuseLoadingBarComponent,
         FuseVerticalNavigationComponent,
         MatButtonModule,
-        MatIconModule
+        MatIconModule,
+        TiposVehiculosComponent,
+        VehiculosDestacadosComponent
     ],
 })
 export class ModernLayoutComponent implements OnInit, OnDestroy {

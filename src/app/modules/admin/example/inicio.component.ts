@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector     : 'example',
+    selector     : 'inicio',
     standalone   : true,
     templateUrl  : './inicio.component.html',
     encapsulation: ViewEncapsulation.None,

@@ -1,0 +1,16 @@
+<div class="w-full overflow-x-auto">
+  <div class="flex gap-4 px-4 py-2 w-max">
+    <div *ngFor="let item of listatipoVehiculos">
+      <fuse-card class="flex-shrink-0 w-60 flex flex-col overflow-hidden rounded-xl shadow-md">
+        <img
+          class="object-cover w-full h-40"
+          [src]="item.img"
+          alt="Card cover image"
+        />
+        <!-- <div class="m-4 text-lg font-semibold leading-tight text-gray-800">
+          {{ item.titulo }}
+        </div> -->
+      </fuse-card>
+    </div>
+  </div>
+</div>
