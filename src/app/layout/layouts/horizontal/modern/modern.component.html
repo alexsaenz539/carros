@@ -150,13 +150,8 @@
     </div> -->
 
   }
-  <!-- Components -->
-
-  <!-- Content -->
   <div class="flex w-full flex-auto flex-col">
-    <!-- <div class="">
-            <img  src="assets/images/estacionamiento.png" alt="Logo image" />
-        </div> -->
+    @if (!isScreenSmall) {
     <div class="relative w-full ">
       <img src="assets/images/estacionamiento.png" alt="Logo image" class="w-full h-full object-cover" />
       <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-[10%] 
@@ -171,10 +166,34 @@
         </button>
       </div>
     </div>
+    }
+
+    @if (isScreenSmall) {
+    <div class="relative w-full h-52 sm:h-60 md:h-72">
+      <img src="assets/images/estacionamiento.png" alt="Logo image" class="w-full h-full object-cover" />
+
+      <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-[10%]
+             flex items-center gap-2 sm:gap-3
+             bg-white/10 backdrop-blur-md border border-white/30
+             rounded-full px-3 py-2 sm:px-6 sm:py-3
+             shadow-lg text-white w-[90%] sm:w-[70%] md:w-[60%] max-w-xl">
+        <mat-icon class="text-white opacity-80 text-base sm:text-lg">search</mat-icon>
+
+        <input type="text" placeholder="Buscar vehículo..."
+          class="flex-1 bg-transparent outline-none text-sm sm:text-base text-white placeholder-white/70" />
+
+        <button class="bg-blue-600 hover:bg-blue-700 text-white rounded-full
+               px-3 sm:px-5 py-1.5 font-medium text-sm sm:text-base transition">
+          Buscar
+        </button>
+      </div>
+    </div>
+    }
+
 
     <span class="ml-10 mt-10 text-3xl">Tipo de vehiculo</span>
-    <app-tipos-vehiculos class="mx-10 mt-5 mb-10"/>
-    <app-vehiculos-destacados/>
+    <app-tipos-vehiculos class="mx-10 mt-5 mb-10" />
+    <app-vehiculos-destacados />
     <!-- <div class="min-h-full "></div>
     <div class="min-h-full bg-blue-900"></div> -->
   </div>
